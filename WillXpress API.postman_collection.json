@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "3d2fa1ff-5a37-4dae-b876-be9b260432b0",
+		"name": "WillXpress API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ecn\":\"1231241243\",\r\n    \"password\":\"abcABC123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/customer/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customer",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"John Doe\",\r\n    \"age\":24,\r\n    \"address\":\"London street\",\r\n    \"ecn\":\"1231231411\",\r\n    \"password\":\"abcABC123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/customer/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customer",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\":\"121242141\",\r\n    \"accountType\":\"Savings Account\",\r\n    \"balance\":\"11200\",\r\n    \"status\":\"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/account/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\":\"6281b92dd3aed9fc2afc15b6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Beneficiary",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beneficiaryType\":\"String\",\r\n    \"relationship\":\"String\",\r\n    \"beneficiaryName\":\"String\",\r\n    \"beneficiaryAge\":40,\r\n    \"beneficiaryIdType\":\"String\",\r\n    \"beneficiaryIdNo\":\"13123214\",\r\n    \"isMinor\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/beneficiary/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"beneficiary",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Beneficiary",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beneficiaryId\":\"6281b82bd3aed9fc2afc15a8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/beneficiary/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"beneficiary",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Asset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assetName\":\"car\",\r\n    \"beneficiaryId\":\"6281ad6b81fff6ac18dff93f\",\r\n    \"assetType\":\"car\",\r\n    \"monetaryValue\":121244,\r\n    \"otherDetails\":\"String\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/asset/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"asset",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Asset",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assetId\":\"6281bc31722668c6757cff3a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/asset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"asset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MWFhMDczMWUxZTc4MWE3NDRmZWExIn0sImlhdCI6MTY1MjY2NzUzOCwiZXhwIjoxNjUyNzUzOTM4fQ.AGD3C1WAWIxKktKcvaVost82ebh1znOOYHCcAGIDHnY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/admin/get-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
